@@ -1,0 +1,53 @@
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <title>Voice ID</title>
+    <style>
+        html, body {
+            background-color: #f7f7f7;
+            min-height: 100%;
+            margin: 0;
+        }
+        #container {
+            min-height: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1em;
+            background-color: white;
+            box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+        }
+    </style>
+</head>
+<body><div id="container">
+    <br>
+    <h1>Voice ID 荷语言 · 智慧图灵测试</h1>
+    <p><b>验证内容：</b>请大声背诵以下内容，并提交录音文件。</p>
+    <ul>
+        <li>科技并带着趣味</li>
+        <li>不觉得这很酷吗</li>
+        <li>作为一名理工男</li>
+        <li>我觉得这太酷了</li>
+        <li>很符合我对未来生活的想象</li>
+    </ul>
+    <p><b>验证要求：</b>每句话之间的间隔必须在 9.5 至 10.5 秒之间，录音文件不能超过 2MB 或 60 秒。</p>
+    <p>我们会使用 <a href="https://cloud.tencent.com/document/product/1093/35646" target="_blank" rel="noopener">腾讯云语音识别 API</a> 检查录音内容是否正确。</p>
+    <br>
+    <p>如果你的 <b>录音文件大小不超过 12288 字节</b> 或者 <b>录音时长不超过 30 秒</b>，我们将赠予你 Flag 1。</p>
+    <p>如果同时满足以上两个条件，我们将赠予你 Flag 2。</p>
+    <br>
+    <form action="/submit" method="post" enctype="multipart/form-data">
+        <p>
+            <b>进行验证：</b>
+            <input type="file" name="file" accept=".wav,.pcm,.ogg,.mp3,.m4a,.aac">
+            <button type="submit">提交</button>
+        </p>
+    </form>
+    <br>
+    <p><b>由于我们的 API 额度有限，请珍惜提交机会：</b></p>
+    <ul>
+        <li>每名选手只有 400 次提交机会（你还剩 {{ submission_left }} 次，腾讯云识别失败时不扣除数量）</li>
+        <li>每 10 秒钟只能提交一次</li>
+        <li>如果需要批量尝试，建议下载题目源码后自己 <a href="https://cloud.tencent.com/product/asr" target="_blank" rel="noopener">申请 API Key</a>（每月有 5000 次免费额度）</li>
+    </ul>
+</div></body>
+</html>

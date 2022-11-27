@@ -1,0 +1,1 @@
+flag{g00d_1inear_equation}

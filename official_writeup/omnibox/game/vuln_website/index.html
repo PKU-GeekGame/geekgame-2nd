@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+<title>梗图网盘</title>
+
+<style>
+body {
+    font-size: 1.25em;
+    text-align: center;
+}
+</style>
+
+<br>
+<h1>梗图网盘</h1>
+<p class="flag">fake{get your flag from xss bot}</p>
+<!-- xss bot will replace it with real flag -->
+
+<br>
+<p><input id="filename" list="filenames" placeholder="输入表情包名称"> <button id="go" onclick="go()">Go</button></p>
+<datalist id="filenames">
+    <option value="thursday">
+    <option value="Vme50">
+    <option value="aranara">
+    <option value="vivo">
+    <option value="how_to_get_flag">
+</datalist>
+
+<script>
+function go() {
+    location.href = document.getElementById('filename').value + '.jpg';
+}
+</script>

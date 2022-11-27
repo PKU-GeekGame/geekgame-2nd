@@ -1,0 +1,12 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Calculator Premium backend, with a ultimate secure sandbox",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "@fastify/static": "^6.5.0",
+    "fastify": "^4.9.2",
+    "puppeteer": "^19.2.0"
+  }
+}
