@@ -1,0 +1,7 @@
+熟悉的签到题，跟前届几乎完全一致，字符用奇怪的字体来显示了。
+不过这次的PDF文件加了权限限制。但众所周知，看得见的都能复制，只要把PDF的权限限制解除就完事了。
+我用 https://smallpdf.com/cn/unlock-pdf 这个网站解锁了PDF，然后把里面的字符复制出来：
+fa{hns4PaigGeGm!
+lgTak__lyn_ekae}
+上下行交错拼合，就得到了第一个flag：
+flag{Thanks_4_Playing_GeekGame!}

@@ -1,0 +1,102 @@
+14 f
+805 e
+870 s
+1576 f
+1609 n
+1765 g
+1922 w
+2599 n
+2637 k
+2662 a
+2777 g
+2915 z
+2952 t
+3012 q
+3145 h
+3786 b
+4471 g
+4557 n
+4803 i
+4839 h
+4891 i
+6391 o
+6711 y
+9021 y
+8134 l
+9865 x
+10437 x
+
+ff-1562
+nn-990,1958
+gg-1012,1694
+aa-2662
+
+T=22
+
+A ?YNTG ?IWX? ZSEF? L??KQ H
+A BYNTG CIWXD ZSEFJ LMUKQ H
+
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+H???SETQ?????Y??K?ZN??IW??
+HAGXSETQCFUJLYVOKPZNMRIWBD
+
+17 c-e
+18 h-p
+22 u-u
+34 p-r
+35 t-t
+
+1274 e-Z
+1275 n-b
+1276 g-g
+1277 l-p
+1278 i-x
+1279 s-m
+1280 h-n
+
+4658 a-l
+4659 n-q
+4660 d-d
+
+795 a-n
+796 n-i
+797 a-g
+798 l-a
+799 y-w
+800 s-q
+801 i-l
+802 s-a
+
+55 b-e
+56 e-n
+57 t-p
+58 w-a
+59 e-r
+60 e-i
+61 n-q
+
+786 F-W
+787 r-y
+788 e-x
+789 q-p
+790 u-u
+791 e-s
+792 n-n
+793 c-k
+794 y-n
+
+80 t-c
+81 r-h
+11107 r-n
+
+A YBNTG RIWXO ZSEFM LPCKQ H
+A YBNTG RIWXO ZSEFM LPCKQ H
+
+U-J  D-D V-V
+
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+HYPDSETQRUCMFBXLKGZNJVIWAO
+
+foxtrot lima alpha golf left bracket foxtrot romeo echo nine uniform echo november charlie yankee underscore four november alpha lima yankee five india sierra underscore one sierra underscore uniform sierra echo foxtrot uniform lima right bracket
+
+flag{fre9uency_4naly5is_1s_useful}

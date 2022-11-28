@@ -1,0 +1,975 @@
+clientVarsCallback({
+    "isProduction": true,
+    "htmlData": {
+        "padType": "sheet"
+    },
+    "clientVars": {
+        "padId": "WYlPTaBZyykj",
+        "title": "企鹅文档",
+        "isOwner": false,
+        "isUserChangeTitle": 1,
+        "advPolicy": {
+            "view_forbid_copy_print": 1,
+            "reader_can_comment": 0,
+            "writer_can_comment": 1
+        },
+        "createdDate": 1667555713000,
+        "creatorCorpId": "",
+        "specialKeyTranslation": null,
+        "lastModifyUser": "p.144115211137726646",
+        "docStatus": 0,
+        "relative": null,
+        "newOpenSvc": 1,
+        "srcType": 6,
+        "envi": {
+            "type": 1,
+            "ip": 0
+        },
+        "clientIp": "",
+        "encrypted": "",
+        "isEmbed": true,
+        "localPadId": "WYlPTaBZyykj",
+        "shortLink": "https://docs.qq.com/sheet/DV1lsUFRhQlp5eWtq",
+        "isPublicPad": false,
+        "userLink": "",
+        "shouldGetFbLoginStatus": true,
+        "collab_client_vars": {
+            "padId": "WYlPTaBZyykj",
+            "globalPadId": "300000000$WYlPTaBZyykj",
+            "websocket": true,
+            "initialAttributedText": {
+                "text": [
+                    [
+                        [
+                            {
+                                "t": 14,
+                                "v": 5,
+                                "c": [
+                                    "BB08J2",
+                                    14,
+                                    0,
+                                    73
+                                ]
+                            },
+                            {
+                                "t": 14,
+                                "v": 5,
+                                "c": [
+                                    "BB08J2",
+                                    2,
+                                    0,
+                                    1
+                                ]
+                            }
+                        ],
+                        [
+                            {
+                                "t": 2,
+                                "v": 5,
+                                "c": [
+                                    "BB08J2",
+                                    [
+                                        [
+                                            10,
+                                            67
+                                        ]
+                                    ],
+                                    [
+                                        [
+                                            1,
+                                            0,
+                                            0.0
+                                        ]
+                                    ],
+                                    "ROWS"
+                                ]
+                            },
+                            {
+                                "t": 2,
+                                "v": 5,
+                                "c": [
+                                    "BB08J2",
+                                    [
+                                        [
+                                            10,
+                                            67
+                                        ]
+                                    ],
+                                    [
+                                        [
+                                            2,
+                                            0,
+                                            1
+                                        ]
+                                    ],
+                                    "ROWS"
+                                ]
+                            },
+                            {
+                                "t": 2,
+                                "v": 5,
+                                "c": [
+                                    "BB08J2",
+                                    [
+                                        [
+                                            0,
+                                            0
+                                        ]
+                                    ],
+                                    [
+                                        [
+                                            1,
+                                            0,
+                                            305.0
+                                        ]
+                                    ],
+                                    "COLUMNS"
+                                ]
+                            },
+                            {
+                                "t": 2,
+                                "v": 5,
+                                "c": [
+                                    "BB08J2",
+                                    [
+                                        [
+                                            0,
+                                            0
+                                        ]
+                                    ],
+                                    [
+                                        [
+                                            2,
+                                            0,
+                                            0
+                                        ]
+                                    ],
+                                    "COLUMNS"
+                                ]
+                            }
+                        ],
+                        [
+                            {
+                                "t": 31,
+                                "v": 5,
+                                "c": [
+                                    "69623b36-2b18-4a7b-825a-07488b9303d2",
+                                    [
+                                        "BB08J2",
+                                        5,
+                                        71,
+                                        0,
+                                        0
+                                    ],
+                                    1,
+                                    {
+                                        "1": 8,
+                                        "5": [
+                                            false,
+                                            false,
+                                            "",
+                                            "",
+                                            1667568325012,
+                                            2
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        [
+                            {
+                                "t": 3,
+                                "v": 5,
+                                "c": [
+                                    [
+                                        "BB08J2",
+                                        0,
+                                        60,
+                                        0,
+                                        0
+                                    ],
+                                    {
+                                        "0": {
+                                            "0": 133,
+                                            "2": [
+                                                1,
+                                                "通过以下链接访问题目机密flag："
+                                            ],
+                                            "3": 0,
+                                            "8": [
+                                                [
+                                                    0,
+                                                    {
+                                                        "0": "#000000",
+                                                        "1": "",
+                                                        "2": 10,
+                                                        "3": 0,
+                                                        "4": 0,
+                                                        "5": 0
+                                                    }
+                                                ]
+                                            ]
+                                        },
+                                        "1": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "h"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "2": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "t"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "3": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "t"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "4": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "p"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "5": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "s"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "6": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                ":"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "7": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "/"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "8": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "/"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "9": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "g"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "10": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "e"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "11": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "e"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "12": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "k"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "13": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "g"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "14": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "a"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "15": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "m"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "16": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "e"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "17": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "."
+                                            ],
+                                            "3": 1
+                                        },
+                                        "18": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "p"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "19": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "k"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "20": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "u"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "21": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "."
+                                            ],
+                                            "3": 1
+                                        },
+                                        "22": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "e"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "23": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "d"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "24": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "u"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "25": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "."
+                                            ],
+                                            "3": 1
+                                        },
+                                        "26": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "c"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "27": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "n"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "28": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "/"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "29": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "s"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "30": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "e"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "31": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "r"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "32": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "v"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "33": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "i"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "34": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "c"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "35": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "e"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "36": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "/"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "37": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "t"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "38": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "e"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "39": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "m"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "40": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "p"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "41": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "l"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "42": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "a"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "43": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "t"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "44": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "e"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "45": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "/"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "46": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "p"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "47": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "r"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "48": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "o"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "49": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "b"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "50": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "_"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "51": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "k"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "52": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "A"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "53": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "i"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "54": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "Q"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "55": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "c"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "56": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "W"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "57": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "H"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "58": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "o"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "59": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "b"
+                                            ],
+                                            "3": 1
+                                        },
+                                        "60": {
+                                            "0": 5,
+                                            "2": [
+                                                1,
+                                                "s"
+                                            ],
+                                            "3": 1
+                                        }
+                                    },
+                                    {
+                                        "0": [
+                                            {
+                                                "0": 32321,
+                                                "2": [
+                                                    0,
+                                                    "General"
+                                                ],
+                                                "8": "left",
+                                                "11": "#000000",
+                                                "12": "",
+                                                "13": 10,
+                                                "14": 0,
+                                                "15": 0,
+                                                "16": 0
+                                            },
+                                            {
+                                                "0": 0
+                                            }
+                                        ],
+                                        "1": [],
+                                        "2": []
+                                    }
+                                ]
+                            }
+                        ]
+                    ]
+                ],
+                "attribs": "",
+                "wbMutationMsg": "",
+                "referenceData": "[]"
+            },
+            "websocketReopenCount": 0,
+            "dver": "2.11.0",
+            "padType": "sheet",
+            "padSubId": "BB08J2",
+            "spv": 1,
+            "maxCol": 1,
+            "header": [
+                {
+                    "d": [
+                        {
+                            "type": "",
+                            "hidden": false,
+                            "name": "工作表1",
+                            "id": "BB08J2"
+                        }
+                    ],
+                    "type": "ms"
+                }
+            ],
+            "bad": 2,
+            "dirty": 2,
+            "pver": 1,
+            "gray": 0,
+            "wmode": "wb",
+            "apool": null,
+            "maxRow": 73,
+            "isChunked": false,
+            "rev": 23,
+            "pollingAttemptNumber": 3,
+            "apid": {
+                "s": "608330098424",
+                "t": 1669453591175,
+                "i": "DV1lsUFRhQlp5eWtq",
+                "g": "45513fb4eee033440ca37a6d1cdec7a091ea9d14",
+                "apid": "",
+                "r": 23
+            },
+            "pos": 0,
+            "ver": 8,
+            "client": {
+                "sid": "608330098424",
+                "tid": 1669453591175,
+                "sig": "45513fb4eee033440ca37a6d1cdec7a091ea9d14",
+                "upid": "DV1lsUFRhQlp5eWtq"
+            }
+        },
+        "creatorDomain": "300000000",
+        "domainId": "300000000",
+        "initialTitle": "企鹅文档",
+        "userPic": "https://thirdqq.qlogo.cn/g?b=oidb&k=8bGp1ia6cMyjjZKa2nia5LWg&kti=Y3sklwAAAAA&s=100",
+        "privilegeAttribute": {
+            "can_copy_doc": 0,
+            "can_edit_collab": 0,
+            "can_view_collab": 0,
+            "can_share": 1,
+            "can_apply_edit": 0,
+            "can_comment": 0,
+            "can_translate": 1,
+            "can_watermark": 0,
+            "can_link_exp": 0,
+            "can_edit": 0,
+            "can_edit_title": 0,
+            "can_view_image": 1,
+            "can_export": 0,
+            "can_spit_slot": 1,
+            "can_save_template": 0,
+            "can_copy": 0,
+            "can_search": 1,
+            "can_add_user": 0,
+            "can_edit_tab": 0,
+            "can_about": 1,
+            "can_print": 0,
+            "can_history": 0,
+            "is_auth": 0,
+            "can_publish": 0,
+            "can_set_range": 0,
+            "can_read": 1
+        },
+        "ownerId": "144115211137726646",
+        "dirty": 2,
+        "userInfo": {
+            "is_gray": false,
+            "domain": "1526473803",
+            "fullName": "倪胖",
+            "corp_id": "",
+            "corp_name": "",
+            "third_uid": "",
+            "uin": 1526473803,
+            "isAdmin": true,
+            "email": "152*******@qq.com",
+            "tinyid": "144115210326518370",
+            "uid": "144115210326518370",
+            "id": "144115210326518370",
+            "userPic": "https://thirdqq.qlogo.cn/g?b=oidb&k=8bGp1ia6cMyjjZKa2nia5LWg&kti=Y3sklwAAAAA&s=100",
+            "isDeleted": false,
+            "flags": true,
+            "loginType": 2,
+            "wechat_official_account": null,
+            "thridAppid": "",
+            "domainId": "23669796",
+            "wx_openid": ""
+        },
+        "userIsGuest": false,
+        "isUpgrade": false,
+        "userDomain": "1526473803",
+        "invitedUserInfos": [],
+        "useFbChat": false,
+        "lastModifyTime": 1667568400339,
+        "personalizeInfo": {
+            "mode": 0,
+            "background": {
+                "transparency": 0,
+                "id": ""
+            }
+        },
+        "proTitle": "",
+        "initialRevisionList": [],
+        "isProPad": true,
+        "padType": "sheet",
+        "creatorId": "144115211137726646",
+        "nameGuess": null,
+        "metaCreateTime": 1667555713970,
+        "userId": "p.144115210326518370",
+        "isLogin": true,
+        "privilegeExpire": 0,
+        "initialSpaces": null,
+        "colorPalette": [
+            "#0d6c54",
+            "#c7983e",
+            "#fb6929",
+            "#b34f97",
+            "#18a281",
+            "#dbca34",
+            "#b66b56",
+            "#7a4271",
+            "#446769",
+            "#b7d02c",
+            "#c6023a",
+            "#cb7fb0",
+            "#6c858c",
+            "#ffb400",
+            "#822f1d",
+            "#bc69f7",
+            "#1fcd92",
+            "#918b3d",
+            "#8b8b8b",
+            "#875c89"
+        ],
+        "disableFB": true,
+        "accountPrivs": {
+            "maxRevisions": 100000000
+        },
+        "isCreator": false,
+        "relativeUrl": null,
+        "specialKey": null,
+        "userColor": 0,
+        "isOpendocxfromTim": false,
+        "initialOptions": {
+            "guestPolicy": "link-read"
+        },
+        "tinyid": "144115210326518370",
+        "uin": "144115210326518370",
+        "creatorCorpName": "",
+        "friendUserIds": [],
+        "userName": "倪胖",
+        "rightFlag": 1,
+        "dropboxConnected": false,
+        "policy": 2,
+        "globalPadId": "300000000$WYlPTaBZyykj",
+        "isDeleted": false,
+        "use_by_external": false,
+        "ownerAppid": "",
+        "isTimDomain": true,
+        "roomUserCount": 9,
+        "padTitle": "企鹅文档",
+        "isPadAdmin": true,
+        "invitedGroupInfos": [],
+        "titleIsReadOnly": false,
+        "appInfoConfig": null,
+        "isAdmin": false,
+        "siteName": "在线文档",
+        "isOverConNum": false
+    },
+    "ownerAppid": "",
+    "pver": 1,
+    "gray": 0,
+    "dver": "2.11.0",
+    "padType": "sheet",
+    "bodyData": {
+        "initialTitle": "企鹅文档",
+        "userPic": "https://thirdqq.qlogo.cn/g?b=oidb&k=8bGp1ia6cMyjjZKa2nia5LWg&kti=Y3sklwAAAAA&s=100",
+        "isFork": false,
+        "isAdmin": true,
+        "guestPolicies": [
+            "deny",
+            "allow",
+            "link",
+            "link-read"
+        ],
+        "account": {
+            "id": 144115210326518370,
+            "userPic": "https://thirdqq.qlogo.cn/g?b=oidb&k=8bGp1ia6cMyjjZKa2nia5LWg&kti=Y3sklwAAAAA&s=100",
+            "tinyid": 144115210326518370,
+            "loginType": 2,
+            "thridAppid": "",
+            "third_uid": "",
+            "fullName": "倪胖",
+            "wx_openid": "",
+            "isDeleted": false,
+            "flags": true,
+            "uin": 1526473803,
+            "isAdmin": true,
+            "corp_id": "",
+            "uid": 144115210326518370,
+            "domainId": 23669796,
+            "domain": "1526473803",
+            "email": "152*******@qq.com",
+            "corp_name": "",
+            "wechat_official_account": null
+        },
+        "isMultiAccount": false,
+        "isOwner": false,
+        "signinUrl": "https://docs.qq.com",
+        "robotsNoindex": false,
+        "signedInAccounts": [],
+        "padType": "sheet",
+        "description": "企鹅文档",
+        "isPro": true,
+        "isProAccountHolder": true,
+        "fullSuperdomain": "docs.qq.com",
+        "isSubDomain": true,
+        "cont": "https://docs.qq.com/sheet/DV1lsUFRhQlp5eWtq",
+        "shortLink": "https://docs.qq.com/sheet/DV1lsUFRhQlp5eWtq",
+        "disableRichText": false,
+        "cQQDomainRequestType": 0,
+        "padHTML": "",
+        "isCreator": false,
+        "following": false,
+        "googleButtonTarget": "_blank",
+        "localPadId": "WYlPTaBZyykj",
+        "lastSaveTimestamp": "2022年11月04日 21:26",
+        "isPublicDomain": true,
+        "websocket": true,
+        "pageTitle": "腾讯文档",
+        "bodyClass": "propad prouser dogfood ",
+        "lastSaveAuthor": null
+    },
+    "isGray": false,
+    "needEscape": true
+})

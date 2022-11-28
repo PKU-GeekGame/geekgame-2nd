@@ -1,0 +1,7 @@
+用浏览器调试工具，在main.js中发现这么一段：
+if (localStorage.getItem('i_am_premium_user') === 'true') {
+  import('./main-premium.js')
+}
+那么在console输入
+localStorage.setItem('i_am_premium_user','true')
+就直接成为premium_user了，并在激活Premium页面拿到了flag1。

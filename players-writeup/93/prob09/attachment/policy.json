@@ -1,0 +1,10 @@
+{
+  "resources": {
+    "./runner.js": {
+      "integrity": "sha256-xzShiEe/PjHjvq6mNeCeo/SL1qwogLPxUvbhJsqMR/0="
+    },
+    "./package.json": {
+      "integrity": "sha256-nMnfJTd4mT2E0bZbn1I6t92JmGT5TU6CeMJvqqB8VMI="
+    }
+  }
+}

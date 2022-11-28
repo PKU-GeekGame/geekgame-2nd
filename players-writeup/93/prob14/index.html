@@ -1,0 +1,54 @@
+<html><head><title>Minesweeper</title><script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script></head><body style="text-align: center;"><h1>Minesweeper Version 2</h1><div id="levelselector" style="display: none;">Choose game level: <button onclick="init(1)">Level 1</button><button onclick="init(2)">Level 2</button><button onclick="init(3)">Level 3</button></div><div id="board" style="display: inline-block; text-align: left;"></div><script>
+function printboard(board){
+    for(i=0;i<16;i++) for(j=0;j<16;j++) {
+        status=board[i][j];
+        $('#b_'+i+'_'+j).text(status==-2?'':status==-1?'💣':status);
+        $('#b_'+i+'_'+j).css("background-color", status==-2?"tan":status==-1?"silver":"white");
+    }
+}
+
+function init(k){
+    $.post("/init",{level:k},function(result){
+        if(result.error) {alert(result.error); return;}
+        refresh();        
+    })
+}
+
+function clickbutton(i,j){
+    $.post("/click",{x:i,y:j},function(result){
+        if(result.error) {alert(result.error); return;}
+        if(result.ok!=undefined) {$('#b_'+i+'_'+j).text(result.ok); $('#b_'+i+'_'+j).css("background-color", "white"); if(result.flag) {alert("Flag: "+result.flag);} return;}
+        if(result.boom) {printboard(result.boom); setTimeout(function() {while(document.readyState != "complete"); alert("BOOM!"); refresh();},100); return;}     
+    })
+}
+
+function markflag(i,j){
+    if($('#b_'+i+'_'+j).text()=="") $('#b_'+i+'_'+j).text("⚑"); else if ($('#b_'+i+'_'+j).text()=="⚑") $('#b_'+i+'_'+j).text("");
+}
+
+function refresh(){
+    $.getJSON("/board",{},function(result){
+        if(result.error) {$('#board').hide(); $('#levelselector').show(); return;}
+        $('#levelselector').hide();
+        $('#board').show();
+        printboard(result.board);
+    })
+}
+
+function reset(){
+    $.post("/reset",{},function(result){
+         refresh();    
+    })
+}
+
+$('#board').hide();
+var content = '<table border="" oncontextmenu="return false;">'
+for(i=0; i<16; i++){
+    content += '<tr>';
+    for(j=0; j<16; j++) content+='<th width="25" height="30" id="b_'+i+'_'+j+'" onclick="clickbutton('+i+','+j+')" oncontextmenu="markflag('+i+','+j+'); return false;" style="user-select: none;"></td>';
+    content += '</tr>';
+}
+content += '</table><button onclick="reset()">Reset</button>'
+$('#board').append(content);
+refresh();
+</script></body></html>

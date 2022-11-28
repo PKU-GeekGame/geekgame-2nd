@@ -1,0 +1,7 @@
+程序是个jar包，那么反编译看看。我用了jd-gui，顾名思义是个GUI程序，新人友好向。
+Java反编译得到的代码真可谓清晰明了，比阅读汇编友好太多了，截图见附件source.png。
+
+根据反编译的代码，flag1是将读入的string作base64编码，再做一个置换，与预定义的string比较。注意到整个过程是可逆的，那么逆置换，再base64解码就能得到flag1了。代码见附件f1.m（是的，用MATLAB）。
+
+而flag2是在Java程序中，以字符串的形式嵌入了一段JavaScript，然后调用解释器执行它。内嵌的这段JS与0xEF做了xor，只要再xor一次就得到了原代码。虽然做了混淆，但大致能读出，这段JS也是将输入的string处理后与flag作比较，那么把里面那段求flag的代码单独拿出来运行（用浏览器开发者工具的console），就得到了flag2。
+附件f2.py用于从jar包中的GeekGame.class文件提取原JS代码，f2.js求出flag2的ASCII。

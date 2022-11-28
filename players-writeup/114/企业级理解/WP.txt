@@ -1,0 +1,2 @@
+1阶段毫无头绪，想到了要从URL控制策略入手，但找不到突破口。
+根据2阶段提示“很多HTTP框架都会在判断网址对应的 Endpoint 时去除网址结尾的斜杠”，发现可以访问 https://prob08-5p2tm3vi.geekgame.pku.edu.cn/admin/query/? ，再按照页面上给出的信息，访问https://prob08-5p2tm3vi.geekgame.pku.edu.cn/admin/query/?type=PKU_GeekGame 拿到了flag1。
