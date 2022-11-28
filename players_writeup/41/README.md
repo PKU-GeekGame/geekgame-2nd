@@ -2,7 +2,8 @@
   
 *此件无条件公开*  
   
-大家好，我脚本小子DF4D0155又变菜啦！  
+大家好，我脚本小子DF4D0155又~~莱~~菜啦！  
+题量变大了，我变菜了【哭】
   
 ## †签到†  
 **又**是大家最喜欢的Wingdings！  
@@ -122,7 +123,7 @@ https://www.zhihu.com/question/61427323
 
 https://github.com/vijos/malicious-code
 
-他拯救了我(的flag1和flag2)。感谢大家（可能是过去）最喜欢的vijos。
+他拯救了我(的flag1和flag2)。感谢大家(可能是过去)最喜欢的vijos。
 
 ~~~cpp
 struct x struct z<x(x(x(x(x(x(x(x(x(x(x(x(x(x(x(x(x(x(y,x(y><y*,x(y*w>v<y*,w,x{}
@@ -453,7 +454,7 @@ c^#[scheme code goes here]
  }>></score>  
 ~~~  
 可得:  
-![](wiki/dir.png)  
+![](dir.png)  
 如法炮制:  
 ~~~scheme  
 <score>\new Staff <<{  
@@ -464,7 +465,7 @@ c^#[scheme code goes here]
     c^#(object->string(read-char file))  
     //此处略  
 ~~~  
-![](wiki/moiw1ulu.png)  
+![](moiw1ulu.png)  
   
     flag{li1yp0nd_can_1ead_to_rce}  
   
@@ -489,6 +490,8 @@ POST请求加  --data-raw 'type=PKU_GeekGame' 得到flag1。
     flag1{8a97cd0b-adec-4e63-bd46-3e6c60ea9d78} 恭喜你发现flag1，还有其他flag等待你发现哦
 
 发现不动了！
+
+最多找到了：https://stackoverflow.com/questions/54733280/how-to-keep-baseurl-when-using-uri-in-spring-webflux 意识到或许可以通过使uri的参数为完整的url以跳转，但一直在400，寄！
   
 ## 这也能卷  
 我太菜了.jpg  
@@ -499,7 +502,7 @@ const flag0 = _0x340c07(0x65d, 'aIlf', 0x554, 0x7bc, 0x7c0) + _0x340c07(0x522, '
 ~~~  
 好了，只需要大战反调试之后控制台直接flag0就好了！我总之采用了十分暴力的把调反调试的某个函数改成了空函数的方法。  
 但复盘发现这里有个非常非常简单的方法可以无需大战。  
-![](js/js.png)  
+![](js.png)  
 Chrome是个好东西 (大概 (可能是因为我没做出来XSS吧 (逃  
   
     flag{fr0nt3nd_log1c_m4tters}  
@@ -546,7 +549,7 @@ pub fn run() {
   
     flag{W0W-yoU_pRoVed-thI5_I5-un5OUNd}  
   
-我是一个今天之前没写过rust的人，遂知难而退见好就收。  
+我是一个今天之前完全没写过rust的人，遂知难而退见好就收。  
   
 ## 381654729  
 大家好，我又把Algorithm做成Misc啦.jpg  
@@ -561,7 +564,7 @@ for i in range(1,num_len+1):
 ~~~  
 本质就是在验证num是一个base 16的polydivisible number。找到它，与2511413510786744827230530123596520839592789293371773973906异或即可。  
   
-英语wiki贴心地给出了OEIS链接(https://oeis.org/A109032)；但因为实在太多了(如二阶段提示所述)，所以对于base 16的polydivisible number，OEIS最多也只能给出一个（也就是最大值）。尝试之后发现不对。  
+英语wiki贴心地给出了OEIS链接(https://oeis.org/A109032)；但因为实在太多了(如二阶段提示所述)，所以对于base 16的polydivisible number，OEIS最多也只能给出一个(也就是最大值)。尝试之后发现不对。  
   
 但是以polydivisible number为关键词检索，可以找到：  
 https://s2t2.home.blog/2021/03/29brainteaser-1040-an-uncommon-number/  
@@ -571,8 +574,16 @@ https://s2t2.home.blog/2021/03/29brainteaser-1040-an-uncommon-number/
     flag{fOund_magIc_nuMbEr}  
   
 ## 乱码还原  
-  
-注意到，转换后会丢失信息的情况是有限的。可以列出一个表：
+
+问题是怎么来的？答案是utf-8的部分字符在转换为shift_jis后会无法找到对应的字符从而丢失。
+
+注意到，转换后会丢失信息的情况是有限的。在本题中，所有的utf-8字符第一字节均在[0xe3,0xe9]中，且上述范围内的字节一定为utf-8字符的开头。那么会导致丢失的绝大多数情况包括以下两种：
+
+1. 从一个utf-8字符的开头断开。那么其首两字节一定能转换为shift_jis字符;最后一个字节可能不合规(如0x80)，或无法与下一个字符首字节转换为单一字符。
+
+2. 从一个utf-8字符的第一字节后断开，即首字节被与前一字符尾字节合并。此时若第二字节不能作为字符开头(如0x80)，其就会丢失，第三字节需要与情况1类似的讨论；或二三字节不能构成合法字符，则一并丢失。
+
+枚举与佛论禅涉及的所有汉字可能导致的上述情况，可以列出一个表：
 
 ~~~py
 {b'\xe6\xbb': [b'\xe6\xbb\x85'],
@@ -618,49 +629,61 @@ https://s2t2.home.blog/2021/03/29brainteaser-1040-an-uncommon-number/
  b'\xe6\xaf': [b'\xe6\x80\xaf'],
  b'\xe4\xbe': [b'\xe4\xbe\x84']}
 ~~~
-对着转换即可。
+对着转换即可。对于有多种可能原始字符的情况，则枚举补齐尝试看是否可解回为合法字符。
 
-flag2的十次加密可以通过密文的字符集反推加密方式。
-  
+最后一个字符则需要单独讨论。
+
+flag2的十次base%d加密可以通过密文所含字符集反推加密方式。
   
 ## 奇怪的加密  
-首先明确题目采用的加密方式：  
+首先明确题目采用的加密方式：初始时所有字符的密钥均为其本身。但初始化了一个密钥的轮换顺序；每次加密后密钥即按序发生轮换。
+
 ### flag1  
-显然由于每过一个可加密字符密钥就轮换一次，常规的词频分析(指出现最多的字母就是e)是不能用了。但是有一个非常显然的事实可以利用：单字母小写的单词一定是a。  
+显然，由于每过一个可加密字符密钥就轮换一次，常规的词频分析(指出现最多的字母就是e)是不能用了。但是有一个非常显然的事实可以利用：单字母小写的单词一定是a。  
   
-筛出所有单字母小写的单词，查看相同字符每两次出现之间的可加密字符数（即密钥的变换次数），容易发现其均为22的倍数。又因为出现的密文字符种类多于11种，故可以判断此处为22个字母的密钥为一组在轮换。  
+筛出所有单字母小写的单词，查看相同字符每两次出现之间的可加密字符数(即密钥的变换次数)，容易发现其均为22的倍数。又因为出现的密文字符种类多于11种，故可以判断此处为22个字母为一组在轮换。  
   
-确认此处22个字母的密钥在轮换后，每两个相邻单字母单词密文之间的可加密字符数模22，即为他们在轮换顺序上中间相差的字母数。以此可以得到22个字符之间的密钥轮换关系，进而得到大多数的明文；从大多数的明文可以反推得出剩下四个字符的群组关系。
+确认此处22个字母在轮换后，每两个相邻单字母单词密文之间的可加密字符数模22，即为他们在轮换顺序上中间相差的字母数。以此可以得到22个字符之间的密钥轮换关系，进而得到大多数的明文；从大多数的明文可以反推得出剩下四个字符的群组关系。
 
 从而得到完整的明文。明文中有：
 
-     The flag is foxtrot lima alpha golf left bracket foxtrot romeo echo nine uniform echo november charlie yankee underscore four november alpha lima yankee five india sierra underscore one sierra underscore uniform sierra echo foxtrot uniform lima right bracket.
+    The flag is foxtrot lima alpha golf left bracket foxtrot romeo echo nine uniform echo november charlie yankee underscore four november alpha lima yankee five india sierra underscore one sierra underscore uniform sierra echo foxtrot uniform lima right bracket.
 
 NATO编码，转换即可。
+    
+    flag{fre9uency_4naly5is_1s_useful}
   
 ### flag2  
-一阶段完全没明白过来这是什么，甚至没意识到其加密方式与flag1相同（悲  
+一阶段完全没明白过来这是什么，甚至没意识到其加密方式与flag1相同(悲  
   
-此处连上述的分析方式都不能用了，因为他根本没有实际意义。  
+此处连上述的频率分析方式都不能用了，因为他根本没有实际意义。  
   
 统计密文中各个字符每两次连续出现间的密钥变化次数，发现26个字母几乎有相同的模式：即变化次数基本均有1-7，9、11、13、15、17、19-26次(仅a没有1次)，均无8、12、14、16、18次。这符合26个字母的密钥为一组在轮换的情况。  
   
-而根据这一模式规律，可以推定a-f六个字母在26个字母的轮换环上的位置情况。首先  
-  
-同时，容易注意到密文中多次出现了两个相同字符反复出现的情况：这意味着a-f中有至少两个字母在轮换关系中紧邻。因为已知了每26次轮换就会回到密文=明文，可以查看出现密文中相同字符时密钥变换次数模26为0或25的情况；发现紧邻的两个字母为b和d。  
-  
-同理可以推导出所有的字母关系。
+而根据这一模式规律，可以推定a-f六个字母在26个字母的轮换环上的位置情况。首先确定有两个字符相差13个位置；又由于没有出现12、14次，故该两个字符相邻位置均必不是a-f；无8\10\16\18同理。上述过程可排除掉12个位置。又因为出现了1次，故仅剩的两处两字母相邻位置之一必然均为a-f；而另一处则不能同时为a-f，否则与无12次相悖。确定这一点后，根据1-7均有，可以推出六个字符的完整位置模式，如图。
 
-得到明文，检索第一段发现是MD5，爆破即可。我们只枚举了单个和两个字符的情况：
+![](crypt.jpg)
+  
+同时，容易注意到密文中多次出现了两个相同字符反复出现的情况：这意味着a-f中有至少两个字母在轮换关系中紧邻(这也符合我们上一阶段的结果)。因为已知了每26次轮换就会回到密文=明文，可以查看出现密文中相同字符时密钥变换次数模26为0或25的情况；发现紧邻的两个字母为b和d。  
+  
+明确确定两个字母后，即可根据每次出现两个字母相同时密钥轮换次数模26的值得到所有字符的位置关系。
+
+    13 n  7 e  16 s  4 u  10 i  12 x  14 k  19 q  16 s  18 o  0 b  2 j  8 p  20 c  15 m  24 f  23 w  14 k  19 q  3 z  15 m  0 b  16 s  23 w  25 l  6 v  7 e  16 s  20 c  11 r  21 h  18 o  11 r  12 x  20 c  25 l  17 t  22 y  2 j  6 v  10 i  15 m  18 o  23 w  18 o  1 d  6 v  12 x  14 k  16 s  16 s  8 p  1 d 
+
+~~其实知道是26个字母在轮换之后就可以直接得到这一步了.jpg~~
+
+从而得以解密。得到明文，检索第一段发现是MD5，爆破即可。我们只枚举了单个和两个字符的情况：
 
     The MD5 message-digest algorithm is a cryptographically broken?t ??widely used hash function p?ucing ?28-b??h value.?ag?md5_1s_re41ly_1n5ecur3? Althoug?D5 was?????gned to be u???crypto?phic h??nction,???een found? suffer from extensive vulnerabil?s.
 
 已经可以得到flag了。
+
+    flag{md5_1s_re41ly_1n5ecur3}
   
   
 ## 扫雷 II  
-又是大家最喜欢的扫雷！  
-又是大家最喜欢的伪随机数生成！  
+**又**是大家最喜欢的扫雷！  
+**又**是大家最喜欢的伪随机数生成！  
 ### flag1  
 注意到重置seed只有两种情况：加载时和点击reset时，以当时的timestamp为seed。  
 又注意到在Level1下点击开始游戏后即直接进入genBoard1函数，该函数内直接调了256次rand.Intn(257)。  
@@ -695,7 +718,7 @@ func main() {
 ~~~  
 然后再生成一个，对着生成结果手玩下一轮即可。  
   
-因为手玩太费劲了这里就不复现了（。  
+因为手玩太费劲了这里就不复现了(。  
   
 ### flag2  
 感觉暴力能做，但想不到很高效的暴力方法而且懒了，寄！  
@@ -728,8 +751,59 @@ flag2有10个结果的信息未给出。但共28个变量中有6个的值是已�
     
 但后边的内容就因为最后四个变量系数过大只能放弃了。
 
-此处我们枚举了最后四个变量，结合已经解出的半个flag，尝试令解出之后所有的变量带入后得到的结果最小化，可以得到四个字符应该为sser。
-
-同理再反推系数过大的变量即可。
+此处我们枚举了最后四个变量(实际上由于次数过多采用了先用粗粒度枚举到一个区间再用细粒度枚举到值的做法)，尝试令解出之后得到的所有已知变量的根与其已知实际值的差的绝对值之和最小。可得最后四个变量应当临近trer(最后发现应当是sser)。
 
 
+~~~py
+def enc(a,b,c,d):
+    res=[]
+    p=primes[:28]
+    for i in range(18):
+        tmp=[]
+        for j in p[5:-5]:
+            tmp.append(Decimal(j).sqrt())
+        tmp.append(Decimal(ans[i])-sum(Decimal(p[k]).sqrt()*f[k] for k in range(5))-Decimal(p[-5]).sqrt()*a-Decimal(p[-4]).sqrt()*b-Decimal(p[-3]).sqrt()*c-Decimal(p[-2]).sqrt()*d-Decimal(p[-1]).sqrt()*ord('}'))
+        res.append(tmp)
+        #res.append(sum([Decimal(p[i]).sqrt()*int(flag[i]) for i in range(26)])-Decimal(ans[i]))
+        p=[p[-1]]+p[:-1]
+
+minSave=[]
+minValue=0x0fffffff
+groundTruth="y0u_are_a_"
+for a in range(ord('l'),ord('z')):
+    for b in range(ord('l'),ord('z')):
+        for c in range(ord('a'),ord('h')):
+            for d in range(ord('l'),ord('w')):
+                array=np.array(enc(a,b,c,d))
+                R1=array
+                for i in range(18):
+                    R1=RowScale(R1,i,1/R1[i][i])
+                    #print(R1[i])
+                    for j in range(18):
+                        if i==j:
+                            continue
+                        R1=RowAdd(R1,i,j,-R1[j][i])
+                #print(R1)
+                tmpsum=Decimal(0)
+                for i in range(len(groundTruth)):
+                    tmpsum+=Decimal.__abs__(R1[i][-1]-Decimal(ord(groundTruth[i])))
+                print(chr(a),chr(b),chr(c),chr(d),tmpsum)
+                if(tmpsum<minValue):
+                    minValue=tmpsum
+                    minSave=[a,b,c,d]
+~~~
+同理，再把这四个变量当已知值，去反推系数过大的变量即可。
+
+    flag{y0u_are_a_good_guesser}
+
+ ## 总结
+
+上届俺以为题变难了是最要命的，现在发现可能不是，题量变大了才是（。
+
+好在最后保住了15名，感谢各位师傅不杀之恩.jpg
+
+照例，等着看wp学到很多了！
+
+也许下届再见！
+
+~~虽然上次挂出来之后完全没用不过还是继续全网求俺ID这车的近期信息 近年应在牡丹江地区 感激不尽~~

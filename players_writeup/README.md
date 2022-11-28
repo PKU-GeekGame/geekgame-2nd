@@ -8,6 +8,7 @@
 | [pkuGenuine](205/) | saferust 特殊解法 | 4328 | CC-BY-NC | `PP` | `PPP1-` | `P1PP-` | `PP--P` | `PP-11` |
 | [std::\_Rb\_tree](77/) | 选手要求 | 3903 | CC-BY-NC | `PP` | `PP1--` | `P1PP1` | `PP--P` | `PP1P2` |
 | [gzz](1230/) | openssh、ultimatesandbox 特殊解法 | 3821 | CC-BY-NC | `P-` | `----P` | `P-PPP` | `---PP` | `---P-` |
+| [Ginwiahzy](312/) | 选手要求 | 3582 | CC0 | `PP` | `PPP--` | `P1P--` | `P---1` | `PPPPP` |
 | [zhn \#尽力局](143/) | 选手要求 | 3413 | CC-BY-NC | `PP` | `PPP1-` | `P11-1` | `P----` | `PPPP2` |
 | [Testla](280/) | txspeech 特殊解法 | 3335 | CC-BY-NC | `PP` | `PPP1-` | `P1PPP` | `P---1` | `P1P-2` |
 | [ 王村bugless \#躺](81/) | 选手要求 | 3273 | CC-BY-NC | `PP` | `PPP--` | `PPPP1` | `-----` | `P1PP1` |
