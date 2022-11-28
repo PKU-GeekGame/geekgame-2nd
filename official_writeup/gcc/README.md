@@ -86,6 +86,7 @@ struct a {};
 template <typename> struct b { a operator*(); };
 template <typename c, typename d> c e(d);
 template <typename, typename d> auto e(b<d> f) -> decltype(e<int>(*f)) {}
+void blah() { e<a>(b<int>{}); }
 ```
 
 <https://gcc.gnu.org/bugzilla/show_bug.cgi?id=85097>提供了以下代码：
