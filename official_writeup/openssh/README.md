@@ -38,7 +38,7 @@
 
 本题开启了sshd服务，管理员帐号的家目录在内容上是完全可控的，登录管理员帐号即可获得Flag 1，因此自然的思路是能否直接“帮”管理员配置一个公私钥登录。简单尝试可知，直接的配置不会生效，这是因为在默认配置下sshd会检查`authorized_keys`文件的所有者和可写性是否正常（参见[`sshd_config`官方文档](https://www.freebsd.org/cgi/man.cgi?sshd_config)中的`StrictModes`）。
 
-文档中没有详细介绍检查的规则，但阅读[相应源代码](https://github.com/openssh/openssh-portable/blob/2dc328023f60212cd29504fc05d849133ae47355/regress/check-perm.c#L93-L149)可知检查过程会首先解析符号链接（根据[`realpath`函数文档](https://man7.org/linux/man-pages/man3/realpath.3.html)），随后检查文件所有者是否是被登录用户自己或者root（函数`platform_sys_dir_uid`）。这意味着如果可以找到内容可控的，并且由root持有的文件，就可以直接创建相应的符号链接骗过上述检查流程。
+文档中没有详细介绍检查的规则，但阅读[相应源代码](https://github.com/openssh/openssh-portable/blob/ca98d3f8c64cfc51af81e1b01c36a919d5947ec2/misc.c#L2163-L2232)可知检查过程会首先解析符号链接（根据[`realpath`函数文档](https://man7.org/linux/man-pages/man3/realpath.3.html)），随后检查文件所有者是否是被登录用户自己或者root（函数`platform_sys_dir_uid`）。这意味着如果可以找到内容可控的，并且由root持有的文件，就可以直接创建相应的符号链接骗过上述检查流程。
 
 有没有符合条件的文件呢？对于setuid的程序（如`su`），文件`/proc/PID/cmdline`的所有者是root并且内容取决于传入的命令行参数，可以注入公钥充当`authorized_keys`的角色（注意这个文件不需要完全合法，不合法的行会被忽略，同时不会引起错误），因此Flag 1能通过如下方法拿到：
 ```sh
@@ -118,3 +118,5 @@ wait
 ```
 
 此外，Flag 2存在一些非预期解法，如利用`ssh_config`配置中的`PKCS11Provider`注入动态链接库从而任意代码执行，具体可参考优秀选手WP（TODO：补充链接）。
+
+**勘误：** 第二阶段提示以及以上writeup的*初始版本*中声称`authorized_keys`的生效条件是[文件`check-perm.c`中的函数`auth_secure_path`](https://github.com/openssh/openssh-portable/blob/2dc328023f60212cd29504fc05d849133ae47355/regress/check-perm.c#L93-L149)，但实际上应是[文件`misc.c`中的函数`safe_path`](https://github.com/openssh/openssh-portable/blob/ca98d3f8c64cfc51af81e1b01c36a919d5947ec2/misc.c#L2163-L2232)，这两个函数在内容上是完全一样的，但是调用点略有差别。对于后者，在`authorized_keys`文件的权限检查路径上，其文件的属性是[打开文件后用`fstat`获取的](https://github.com/openssh/openssh-portable/blob/ca98d3f8c64cfc51af81e1b01c36a919d5947ec2/misc.c#L2247)，这意味着符号链接已经被解析，不会在后续[文件类型的检查](https://github.com/openssh/openssh-portable/blob/ca98d3f8c64cfc51af81e1b01c36a919d5947ec2/misc.c#L2193)中失败；对于前者则稍麻烦一些，文件属性是[基于路径检查的](https://github.com/openssh/openssh-portable/blob/2dc328023f60212cd29504fc05d849133ae47355/regress/check-perm.c#L195)，直接的符号链接不能通过[文件类型的检查](https://github.com/openssh/openssh-portable/blob/2dc328023f60212cd29504fc05d849133ae47355/regress/check-perm.c#L110)，需要通过并发制造竞争才能利用。感谢选手 VariantF 及时将这一错误指出，对比赛过程中因为该问题对选手解题造成的困惑表示十分抱歉。
